@@ -152,9 +152,11 @@ SELECT sex , AVG(math),COUNT(id) 人数 FROM student WHERE math > 70 GROUP BY se
 ```
 
 8. 分页查询
+```
     1. 语法：limit 开始的索引,每页查询的条数;
     2. 公式：开始的索引 = （当前的页码 - 1） * 每页显示的条数  
     3. limit 是一个MySQL"方言"
+```
 ```sql
 -- 每页显示3条记录 
 
@@ -163,5 +165,4 @@ SELECT * FROM student LIMIT 0,3; -- 第1页
 SELECT * FROM student LIMIT 3,3; -- 第2页
 
 SELECT * FROM student LIMIT 6,3; -- 第3页
-```
-    
+```    
