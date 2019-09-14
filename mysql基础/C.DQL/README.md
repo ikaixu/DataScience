@@ -1,11 +1,11 @@
 # DQL：查询表中的记录
 ---
-1. 基本用法展示表中的内容
+## 1. 基本用法展示表中的内容
 ```sql
 select * from NameOfTable;--查看一个表中的所有数据
 ```
 
-2. 语法总结
+## 2. 语法总结
 ```sql
 select 字段列表    from         表名列表
                   where        条件列表
@@ -15,7 +15,7 @@ select 字段列表    from         表名列表
                   limit        分页限定
 ```
 
-3. 基础查询
+## 3. 基础查询
 ```sql
 --多个字段的查询。注意：如果查询所有字段，则可以使用*来替代字段列表。
 select 字段名1，字段名2... from 表名；
@@ -35,7 +35,7 @@ distinct
 as
 ```        
 
-4. 条件查询(where子句后跟条件)
+## 4. 条件查询(where子句后跟条件)
 ```
     < 、> 、<= 、>= 、= 、<>  
     BETWEEN...AND  
@@ -97,7 +97,7 @@ SELECT * FROM student WHERE NAME LIKE '___';
 SELECT * FROM student WHERE NAME LIKE '%德%';
 ```
 
-5. 排序查询
+## 5. 排序查询
 ```
 * 语法：order by 子句
 * order by 排序字段1 排序方式1 ，  排序字段2 排序方式2...
@@ -110,7 +110,7 @@ SELECT * FROM student WHERE NAME LIKE '%德%';
 * 如果有多个排序条件，则当前边的条件值一样时，才会判断第二条件。
 ```
 
-6. 聚合函数：将一列数据作为一个整体，进行纵向的计算。
+## 6. 聚合函数：将一列数据作为一个整体，进行纵向的计算。
 ```
     1. count：计算个数
     1. 一般选择非空的列：主键
@@ -125,7 +125,7 @@ SELECT * FROM student WHERE NAME LIKE '%德%';
         1. 选择不包含非空的列进行计算
         2. IFNULL函数
 
-7. 分组查询:
+## 7. 分组查询:
 ```
     1. 语法：group by 分组字段；
     2. 注意：
@@ -151,7 +151,7 @@ SELECT sex , AVG(math),COUNT(id) 人数 FROM student WHERE math > 70 GROUP BY se
 
 ```
 
-8. 分页查询
+## 8. 分页查询
 ```
     1. 语法：limit 开始的索引,每页查询的条数;
     2. 公式：开始的索引 = （当前的页码 - 1） * 每页显示的条数  
